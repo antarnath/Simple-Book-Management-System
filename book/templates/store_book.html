@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}ADD STUDENT PAGE{% endblock title %}
+{% block content %} 
+    {% load crispy_forms_tags %}    
+    <h3 style="text-align: center">ADD NEW BOOK </h3>
+    <form method="post" style="width: 50%; height: 50%; margin: auto" class="pt-5"
+    enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form | crispy}}
+        <button type="submit" class="btn btn-dark mt-2">Submit</button>
+    </form>
+{% endblock content %}
+
